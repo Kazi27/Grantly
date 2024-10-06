@@ -31,7 +31,7 @@ function Individuals() {
     return (
         <div className="app-container">
             <h1 className="app-header">Individuals Page</h1>
-
+            
             {/* Search Bar */}
             <form onSubmit={handleSearchSubmit} className="search-form">
                 <input
@@ -62,6 +62,7 @@ function Individuals() {
                     )}
                 </ul>
             </div>
+            <button className="back-button" onClick={() => window.location.href = '/'}>Back to Homepage</button>
         </div>
     );
 }

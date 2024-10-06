@@ -13,7 +13,7 @@ html, body {
   height: 100vh; /* Full viewport height */
   background-color: #FDF0D5; /* Light background color */
   position: relative; /* Set position for the animation */
-  overflow: hidden; /* Hide overflow for the animation */
+  overflow: auto; /* Hide overflow for the animation */
 }
 
 /* Header */
@@ -140,4 +140,110 @@ html, body {
   left: 15%;
   animation-duration: 10s; /* Different speed */
   animation-delay: 1s;
+}
+
+/* Search form styles */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;  /* Space below search form */
+}
+
+.search-input {
+  padding: 15px;  /* Increase padding for the search input */
+  font-size: 1rem;  /* Increase font size */
+  border: 2px solid #3A3335;  /* Dark border */
+  border-radius: 5px;  /* Rounded corners */
+  width: 300px;  /* Set a specific width for the search bar */
+}
+
+.search-button {
+  padding: 15px 30px;  /* Add padding for the button */
+  font-size: 1rem;  /* Increase font size */
+  background-color: #D81E5B;  /* Button color */
+  color: white;  /* Text color */
+  border: none;
+  border-radius: 5px;  /* Rounded corners */
+  cursor: pointer;  /* Pointer cursor on hover */
+  margin-left: 10px;  /* Space between input and button */
+  transition: background-color 0.3s;  /* Smooth transition */
+}
+
+.search-button:hover {
+  background-color: #F0544F;  /* Lighter shade on hover */
+}
+
+/* Grants section styles */
+.grants-section {
+  margin: 40px 0;  /* Space above and below grants section */
+  width: 100%;  /* Full width for grants section */
+}
+
+.grant-item {
+  background-color: #C6D8D3;  /* Light background for grant items */
+  border-radius: 8px;  /* Rounded corners */
+  padding: 20px;  /* Padding inside grant items */
+  margin-bottom: 20px;  /* Space between grant items */
+  color: #3A3335;  /* Dark text color */
+}
+
+.grant-item h3 {
+  font-size: 1.5rem;  /* Increase font size for grant titles */
+  margin: 0;  /* Remove default margin */
+}
+
+.grant-item p {
+  font-size: 1rem;  /* Increase font size for descriptions */
+  margin: 5px 0 0;  /* Space above and below description */
+}
+
+/* Organization profile section styles */
+.org-profile-section {
+  margin-top: 40px;  /* Space above organization profile section */
+  width: 100%;  /* Full width for organization profile */
+}
+
+.org-form {
+  display: flex;
+  flex-direction: column;  /* Stack inputs vertically */
+  gap: 15px;  /* Space between inputs */
+}
+
+.org-input {
+  padding: 15px;  /* Increase padding for inputs */
+  font-size: 1rem;  /* Increase font size */
+  border: 2px solid #3A3335;  /* Dark border */
+  border-radius: 5px;  /* Rounded corners */
+}
+
+.org-button {
+  padding: 15px;  /* Add padding for the button */
+  font-size: 1rem;  /* Increase font size */
+  background-color: #D81E5B;  /* Button color */
+  color: white;  /* Text color */
+  border: none;
+  border-radius: 5px;  /* Rounded corners */
+  cursor: pointer;  /* Pointer cursor on hover */
+  transition: background-color 0.3s;  /* Smooth transition */
+}
+
+.org-button:hover {
+  background-color: #F0544F;  /* Lighter shade on hover */
+}
+
+.back-button {
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1rem; /* Font size */
+  background-color: #3A3335; /* Button background color */
+  color: #FFFFFF; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s, transform 0.2s; /* Add transition for hover effect */
+}
+
+.back-button:hover {
+  background-color: #F0544F; /* Lighter button color on hover */
+  transform: scale(1.05); /* Scale effect on hover */
 }

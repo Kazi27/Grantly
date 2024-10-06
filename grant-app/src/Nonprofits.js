@@ -84,7 +84,7 @@ function Nonprofits() {
                     )}
                 </ul>
             </div>
-
+                    
             {/* Organization Profile Form */}
             <div className="org-profile-section">
                 <h2>Create Organization Profile</h2>
@@ -134,6 +134,8 @@ function Nonprofits() {
                     </button>
                 </form>
             </div>
+            <button className="back-button" onClick={() => window.location.href = '/'}>Back to Homepage</button>
+
         </div>
     );
 }
