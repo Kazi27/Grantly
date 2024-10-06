@@ -1,11 +1,14 @@
-import React from 'react';
-import './App.css';  // Add this line for external CSS
+import React, { useState } from 'react';
+import './App.css'; // Add this line for external CSS
+import Individuals from './Individuals';
+import Nonprofits from './Nonprofits';
 
 function App() {
+    const [currentPage, setCurrentPage] = useState('landing');
+
     // Function to handle button clicks
     const handleButtonClick = (type) => {
-        console.log(`Navigating to ${type} page`);  // Log the action (you can replace this with actual navigation logic later)
-        alert(`Navigating to ${type} page`);  // Alert to simulate navigation
+        setCurrentPage(type);
     };
 
     return (
@@ -22,11 +25,19 @@ function App() {
             <div className="bubble"></div>
             <div className="bubble"></div>
 
-            <h1 className="app-header">Welcome to Grantly</h1>
-            <div className="button-container">
-                <button className="nav-button" onClick={() => handleButtonClick('Individuals')}>For Individuals</button>
-                <button className="nav-button" onClick={() => handleButtonClick('Nonprofits')}>For Nonprofits</button>
-            </div>
+            {currentPage === 'landing' ? (
+                <>
+                    <h1 className="app-header">Welcome to Grantly</h1>
+                    <div className="button-container">
+                        <button className="nav-button" onClick={() => handleButtonClick('Individuals')}>For Individuals</button>
+                        <button className="nav-button" onClick={() => handleButtonClick('Nonprofits')}>For Nonprofits</button>
+                    </div>
+                </>
+            ) : currentPage === 'Individuals' ? (
+                <Individuals />
+            ) : (
+                <Nonprofits />
+            )}
         </div>
     );
 }
