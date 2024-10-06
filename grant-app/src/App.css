@@ -1,97 +1,143 @@
 /* General styles for the entire app */
+html, body {
+  height: 100%; /* Ensure full height for the body */
+  margin: 0; /* Remove default margin */
+}
+
 .app-container {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+  background-color: #FDF0D5; /* Light background color */
+  position: relative; /* Set position for the animation */
+  overflow: hidden; /* Hide overflow for the animation */
 }
 
 /* Header */
 .app-header {
-  font-size: 32px;
+  font-size: 48px; /* Increased font size */
   text-align: center;
-  color: #333;
+  color: #3A3335; /* Dark text color */
   margin-bottom: 20px;
+  position: relative; /* Position for the animation */
+  z-index: 1; /* Ensure header is above the animation */
 }
 
-/* Search form */
-.search-form {
+/* Button Container */
+.button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  gap: 20px; /* Space between buttons */
 }
 
-.search-input {
-  padding: 10px;
-  width: 300px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-.search-button {
-  padding: 10px;
-  margin-left: 10px;
-  background-color: #007bff;
-  color: white;
+/* Navigation buttons */
+.nav-button {
+  padding: 15px 30px;
+  background-color: #3A3335; /* Button background color */
+  color: #FFFFFF; /* White text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px; /* Increased button font size */
+  transition: background-color 0.3s, transform 0.2s; /* Add transition for animation */
 }
 
-.search-button:hover {
-  background-color: #0056b3;
+.nav-button:hover {
+  background-color: #F0544F; /* Lighter button color on hover */
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
-/* Grant list */
-.grants-section {
-  margin-top: 40px;
+/* Floating bubbles effect */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background-color: rgba(216, 30, 91, 0.7); /* Semi-transparent bubble color */
+  border-radius: 50%;
+  animation: rise 12s infinite; /* Animation for floating (longer duration) */
 }
 
-.grant-item {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+@keyframes rise {
+  0% {
+      transform: translateY(0);
+      opacity: 0.7; /* Initial opacity */
+  }
+  100% {
+      transform: translateY(-1000px); /* Move up */
+      opacity: 0; /* Fade out */
+  }
 }
 
-.grant-item h3 {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  color: #333;
+/* Add more bubbles with different sizes and speeds */
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  left: 20%;
+  animation-duration: 10s; /* Different speed */
+  animation-delay: 0s;
 }
-
-/* Organization profile form */
-.org-profile-section {
-  margin-top: 40px;
+.bubble:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 9s; /* Different speed */
+  animation-delay: 2s;
 }
-
-.org-form {
-  display: flex;
-  flex-direction: column;
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 60%;
+  animation-duration: 11s; /* Different speed */
+  animation-delay: 4s;
 }
-
-.org-input {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.bubble:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 80%;
+  animation-duration: 8s; /* Different speed */
+  animation-delay: 1s;
 }
-
-.org-button {
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+.bubble:nth-child(5) {
+  width: 90px;
+  height: 90px;
+  left: 30%;
+  animation-duration: 10s; /* Different speed */
+  animation-delay: 3s;
 }
-
-.org-button:hover {
-  background-color: #218838;
+.bubble:nth-child(6) {
+  width: 65px;
+  height: 65px;
+  left: 75%;
+  animation-duration: 12s; /* Different speed */
+  animation-delay: 5s;
+}
+.bubble:nth-child(7) {
+  width: 75px;
+  height: 75px;
+  left: 10%;
+  animation-duration: 8s; /* Different speed */
+  animation-delay: 0s;
+}
+.bubble:nth-child(8) {
+  width: 55px;
+  height: 55px;
+  left: 90%;
+  animation-duration: 9s; /* Different speed */
+  animation-delay: 2s;
+}
+.bubble:nth-child(9) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s; /* Different speed */
+  animation-delay: 4s;
+}
+.bubble:nth-child(10) {
+  width: 65px;
+  height: 65px;
+  left: 15%;
+  animation-duration: 10s; /* Different speed */
+  animation-delay: 1s;
 }
